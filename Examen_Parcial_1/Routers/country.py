@@ -1,9 +1,7 @@
 #Importamos el framework fastapi a nuestro entorno de trabajo
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, FastAPI, HTTPException
 #Importamos pydantic para obtener una entidad que pueda definir usuarios
 from pydantic import BaseModel
-from fastapi import APIRouter
-
 
 #Creamos un objeto a partir de la clase FastAPI
 router = APIRouter()
