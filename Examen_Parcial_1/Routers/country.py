@@ -269,11 +269,11 @@ Country(code='ZWE',name='Zimbabwe',continent='Africa',region='Eastern Africa',su
 ]
 
 #CREACION DE GET METHOD
-@router.get("/country/", status_code = 200)
+@router.get("/continent/region/country/", status_code = 200)
 async def country():
     return  (countries_list)
 
-@router.get("/country/{ID}")
+@router.get("/continent/region/country/{ID}")
 async def country(ID:str):
     country = filter (lambda Country: Country.code == ID, countries_list)  #Función de orden superior
     try:
@@ -282,7 +282,7 @@ async def country(ID:str):
         raise HTTPException(status_code = 404, detail="PAIS NO EXISTENTE")
 
 #CREACION DE POST METHOD
-@router.post("/country/", status_code = 201)
+@router.post("/continent/region/country/", status_code = 201)
 async def country(country:Country):
     found = False
     
@@ -295,7 +295,7 @@ async def country(country:Country):
 #http://127.0.0.1:8000/country/
 
 #CREACION DE PUT METHOD
-@router.put("/country/", status_code = 200)
+@router.put("/continent/region/country/", status_code = 200)
 async def country(country:Country):
     
     found = False
@@ -310,7 +310,7 @@ async def country(country:Country):
         return country
 
 #DELETE METHOD
-@router.delete("/country/{id}", status_code = 200)
+@router.delete("/continent/region/country/{id}", status_code = 200)
 async def country(id:str):
     
     found = False

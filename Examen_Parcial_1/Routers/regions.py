@@ -23,13 +23,12 @@ regions_list = [
 ]
 
 #CREACION DE GET METHOD
-@router.get("/region/", status_code = 200)
+@router.get("/continent/region/", status_code = 200)
 async def region():
     return  (regions_list)
 
-@router.get("/region/{id}")
+@router.get("/continent/region/{id}")
 async def region(id:int):
-    id.upper()
     region = filter (lambda region: region.rID == id, regions_list)  #Función de orden superior
     try:
         return list(region)[0]
@@ -37,7 +36,7 @@ async def region(id:int):
         raise HTTPException(status_code = 404, detail="REGION NO EXISTENTE")
 
 #CREACION DE POST METHOD
-@router.post("/region/", status_code = 201)
+@router.post("/continent/region/", status_code = 201)
 async def continent(region:Region):
     found = False
     
@@ -47,10 +46,10 @@ async def continent(region:Region):
     else:
         regions_list.append(region)
         return continent
-#http://127.0.0.1:8000/region/
+#http://127.0.0.1:8000/continent/region/
 
 #CREACION DE PUT METHOD
-@router.put("/region/", status_code = 200)
+@router.put("/continent/region/", status_code = 200)
 async def continent(region:Region):
     
     found = False
@@ -65,7 +64,7 @@ async def continent(region:Region):
         return region
 
 #DELETE METHOD
-@router.delete("/region/{id}", status_code = 200)
+@router.delete("/continent/region/{id}", status_code = 200)
 async def continent(id:int):
     
     found = False
