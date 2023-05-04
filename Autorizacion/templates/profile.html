@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body>
+    <h1>Mi página</h1>
+    <img src="{{ url_for('static', path='/6681204.png')}}" alt="Mi imagen">
+    <p>Hola soy {{user.full_name}}</p>
+    <p><br>Y mi correo es {{user.email}}</p>
+</body>
+</html>

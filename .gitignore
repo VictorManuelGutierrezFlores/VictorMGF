@@ -1,3 +1,9 @@
 GETyPOST/.vscode/settings.json
 GETyPOST/__pycache__/GETyPOST.cpython-311.pyc
 Actividad2/__pycache__/CRUD_A2.cpython-311.pyc
+__pycache__
+Autorizacion\__pycache__
+DB\__pycache__
+DB\models\__pycache__
+DB\router\__pycache__
+Recursos_Estaticos\__pycache__
